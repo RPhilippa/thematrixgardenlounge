@@ -1,0 +1,870 @@
+/* General Styles for All Pages */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fadeIn to the whole page */
+.main-content {
+    animation: fadeIn 1s ease-in;
+}
+
+    
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Consistent background color */
+    color: #333; /* Consistent text color */
+    line-height: 1.6; /* Improved readability */
+}
+a {
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+/* General Navigation Styles */
+nav {
+    background-color:none; /* Consistent background color */
+    padding: 10px 0;
+    text-align: right; /* Aligns navigation to the left */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav ul li a {
+    color: #fff; /* Consistent link color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.15em;
+    align-items: flex-end;
+}
+
+nav ul li a:hover {
+    color: #ff7f50; /* Hover effect */
+    text-decoration: underline;
+}
+nav ul li a.active {
+    color: #fff; /* Active link color */
+    background-color: #18611a; /* Highlight background */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        width: 100vw; /* Full width for mobile */;
+    }
+    nav ul li {
+        margin: 0 7px;
+        width: 100%;
+        text-align: center; 
+    }
+    nav ul li a {
+        display: block;
+        font-size: 0.95em;
+        width: 100vw;
+        box-sizing: border-box;
+        top: -30px;
+    }
+}
+h1 {
+    font-size: 3em; /* Consistent font size for all <h1> elements */
+    color: #18611a; /* Consistent color */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5em; /* Consistent font size for all <h2> elements */
+    color: #333;
+    margin-bottom: 10px;
+}
+/* Global Background Image */
+header, body {
+    background: url('images/background\ 2.png') no-repeat center center fixed; /* Replace 'background.jpg' with your image path */
+    background-size: cover; /* Ensures the image covers the entire page */
+    color: white; /* Adjust text color for readability */
+    font-family: Arial, Helvetica, sans-serif; /* Optional: Set a consistent font */
+    margin: 0;
+    padding: 0;
+}
+.main, .about, .featured {
+    background-color: transparent; /* Removes any solid background color */
+    padding: 20px; /* Optional: Add padding for spacing */
+}
+h1, h2, h3, p, a {
+    color: black; /* Use white text for contrast */
+}
+footer {
+    background-color: #18611a; /* Consistent background color */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add padding for spacing */
+    position: relative; /* Ensure it stays within the flow of the page */
+    bottom: 0;
+    width: 100%; /* Full width */
+}
+
+/* index.html styling*/
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+main-header .logo{
+    margin: 0; /* Removes any default margin */
+    padding: 0; /* Removes any default padding */
+    position: relative; /* Allows precise positioning */
+    top: 0; /* Moves the logo closer to the top */
+    left: 0; /* Moves the logo closer to the left */
+}
+
+.main-header .logo img {
+    height: 100px;
+    align-items: center;
+    display: block;
+}
+.main-header nav{
+    margin-left: auto; /* Pushes the navigation to the far right */
+} 
+
+
+.main-header nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    align-items: center;
+}
+
+.main-header nav ul li a:hover {
+    color: #ff7f50;
+}
+
+/* Hero Section */
+.main {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.main-content {
+    margin-top: -30px; /* Moves the content up by reducing the top margin */
+    padding-top: 10px; /* Adjusts padding to maintain spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: center; /* Center-align the text */
+}
+
+.main-content h1 {
+    color: #18611a; /* Green color for the main heading */
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.main-content h2{
+    color:black;
+}
+.main-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.main-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-content .btn:hover {
+    background-color: #45a049;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: rgba(255,255,255,0.8);/*White background with 80% opacity*/
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px; /*rounded corners for a modern look*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/*Optional as it just adds a subtle shadow*/
+}
+
+.about h2 {
+    color: #18511a;
+    margin-bottom: 20px;
+}
+
+/* Featured Section */
+.featured {
+    padding: 50px 20px;
+    background-color:none;
+}
+
+.featured h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.featured-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item img
+.featured-item iframe {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 90%;
+    max-width: 350px; 
+    height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: none;
+    object-fit: cover;     /* Ensures images and iframes fill the area nicely */
+}
+.featured-item iframe{
+    height: 305px;
+    border-radius: 10px;
+}
+
+.featured-item h3 {
+    margin-bottom: 10px;
+}
+
+.featured-item p {
+    margin-bottom: 20px;
+}
+
+.featured-item .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-item .btn:hover {
+    background-color: #45a049;
+}
+
+.featured-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+footer p{
+    color:white;
+}
+
+footer .social-media a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media a img:hover {
+    transform: scale(1.2);
+}
+@media (max-width: 768px) {
+    .featured-grid {
+        grid-template-columns: 1fr; /* Adjust height for smaller screens */
+    }
+
+    .main-header{
+        flex-direction: column; /* Stack navigation items vertically */
+        text-align: center; /* Center align items */
+    }
+
+    .main-header nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px; /* Adjust spacing between items */
+    }
+}
+
+
+/*General Styles for About Us*/
+/* Hero Section */
+.about-header {
+    text-align: center; /* Center-align the text */
+    padding:0; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: center; /* Center-align the text */
+}
+
+
+.about-header h1 {
+    font-size: 3em;
+    margin-bottom: 0;/* Remove extra space below the <h1> */
+    line-height: 1.1; /* Adjust line height for better readability */
+    color:#18611a ;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-size: 1.2em;
+    color: whitesmoke; /* Adjust text color for readability */
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: White transparent background */;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-text h2 {
+    color:#18611a;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color:  rgba(255, 255, 255, 0.8); /* Optional: White transparent background */
+    padding: 20px; /* Adjust padding for spacing */;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-section h2 {
+    color:  #18611a; /* Green color for the heading */
+    margin-bottom: 20px;
+}
+
+.mission-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+    display: inline;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img.social-icon {
+    width: 32px; /* Set the size of the icons */
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img.social-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+
+
+/* Menu Styling */
+/* Menu Header */
+.menu-header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #18611a;
+    color: white;
+}
+
+/* Menu Sections */
+.menu-header{
+    margin-top: 0px; /* Moves the header up by reducing the top margin */
+    padding-top: 10px; /* Adjusts padding to maintain spacing */
+    text-align: center;/* Ensures the text is centered */
+
+}
+.menu-header h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    color:#18611a;
+}
+.menu-header p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: 0px; /* Removes extra space above the <p> */
+    color:whitesmoke;
+    text-align: center; /* Center-align the text */
+}
+.menu-section {
+    margin-top: -20px; /* Moves the section up by reducing the top margin */
+    padding-top: 10px; /* Adjusts padding to maintain spacing */
+}
+
+.menu-section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color:rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background for consistency */;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section h2 {
+    text-align: center;
+    color: #18611a;
+    margin-bottom: 20px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1200px;/* Optional: Limit the width for better readability */
+}
+
+.featured-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 90%;
+    max-width: 350px; /* Adjust the max-width as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.menu-item p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.featured-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .featured-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        padding: 10px 0;
+    }
+    .featured-item img {
+        max-width: 98vw; /* Adjust the max-width for smaller screens */
+        width: 98%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 20px;
+}
+
+/* General Styles for Calendar of Events*/
+.calendar-header p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: -12px; /* Removes extra space above the <p> */
+    color:whitesmoke;
+    text-align: center; /* Center-align the text */
+}
+header{
+    margin: 0;
+    padding: 15px;
+    color:#18611a;
+    text-align: center;
+}
+nav ul li{
+    color: #234040;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.calendar-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #18611a;
+}
+h2{
+    color: #ccc;
+}
+
+
+.event-calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.event-calendar th, .event-calendar td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.event-calendar th {  /*th=table header*/
+    background-color:#18611a;
+    color: white;
+    font-weight: bold;
+}
+
+.event-calendar tr:nth-child(even) { /*tr=table row*/
+    background-color: #f2f2f2;
+}
+
+.event-calendar tr:hover {
+    background-color: #ddd;
+}
+
+.event-calendar td { /*td=table data*/
+    font-size: 16px;
+}
+
+/* Reservation Form Styling */
+.reservation-header p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: -10px; /* Removes extra space above the <p> */
+    color:whitesmoke;
+    text-align: center; /* Center-align the text */
+}
+.reservation-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background for consistency */;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form h1 {
+    text-align: center;
+    color: #18611a;
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* Aligns the label text to the left */
+}
+
+.reservation-form input,
+.reservation-form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.reservation-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+    background-color: #04f6b9;
+}
+/* Modal Styles */
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    background-color: #18611a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.modal-content button:hover {
+    background-color: #145014;
+}
+
+/* Responsive Styling for Reservation Form */
+@media (max-width: 768px) {
+    .reservation-form {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .reservation-form input, .reservation-form textarea {
+        font-size: 0.9em;
+    }
+}
+.reservation-footer{
+    margin-bottom: -20px;
+}
+/* Feedback Styling */
+.contact-details {
+    text-align: center;
+    padding: 70px 20px;
+    background-color:  rgba(255, 255, 255, 0.8); /* Optional: White transparent background */
+    padding: 20px; /* Adjust padding for spacing */;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-details h2,p {
+    color:#18611a; /* Green color for the heading */    ;
+    margin-bottom: 10px;
+}
+    
+.contact-details p {
+    color: #333; /* Dark gray for the text */
+    margin-bottom: 10px;
+    font-size: 1em; /* Adjust font size for smaller text */
+}
+.contact-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:  rgba(255, 255, 255, 0.8); /* White background with 80% opacity */;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h1 {
+    text-align: center;
+    color: #18611a;
+    margin-bottom: 20px;
+}
+
+.contact-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #04a049;
+}
+
+/*Image container styling*/
+.image-container {
+    text-align: center; /* Centers the image horizontally */
+    margin: 20px auto; /* Adds spacing around the container */
+}
+
+.image-container img {
+    width: 100%; /* Adjusts the size of the image (80% of the container width) */
+    max-width: 600px; /* Sets a maximum width for larger screens */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+.image-container iframe {
+    width: 100%; /* Adjusts the size of the iframe (80% of the container width) */
+    max-width: 600px; /* Sets a maximum width for larger screens */
+    height: 350px; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    display: block;
+    margin: 0 auto; /* Centers the iframe horizontally */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+
+/*Responsive Styling*/
+@media (max-width: 768px) {
+    .contact-form-container{
+        padding: 15px;
+        max-width: 95%; /* Ensures the form fits within smaller screens */
+}
+    
+    .contact-form-container input,
+    .contact-form-container textarea {
+        font-size: 0.9em;  /* Adjusted for better readability */
+    }
+    .image-container img {
+        width: 90%; /* Adjusts the size for smaller screens */
+    }
+    .image-container iframe {
+        width: 90%; /* Adjusts the size for smaller screens */
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form - The Matrix Garden Lounge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Home  </a></li>
+            <li> <a href="about.html">About  </a></li>
+            <li> <a href="menu.html">Menu  </a></li>
+            <li><a href="reservation.html" class="active">Reservation  </a></li>
+            <li> <a href="calendar.html">Calendar  </a></li>
+            <li> <a href="feedback.html">Feedback  </a></li>
+        </ul>
+<header class="reservation-header">
+    <h1>Reservation!!</h1>
+    <p>Where Sophistication Meets Fun!</p>
+</header>
+    <section class="reservation-form"> 
+        <h1>Reserve Your Spot at The Matrix Garden Lounge</h1>
+        <form method="POST" onsubmit="return showReservationSuccess()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+             <div class="phone-input-group">
+        <select id="country-code" name="country-code" required>
+            <option value="+267">🇧🇼 +267</option>
+            <option value="+27">🇿🇦 +27</option>
+            <option value="+263">🇿🇼 +263</option>
+            <option value="+260">🇿🇲 +260</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+1">🇺🇸 +1</option>
+        </select>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{6,15}"
+            required>
+             </div>
+
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Reservation Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+            <label for="comments">Special Requests/Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Let us know your requests"></textarea>
+
+            <button type="submit">Submit Reservation</button>
+        </form>
+    </section>
+
+      <!-- Modal Popup -->
+      <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p>Your details have been submitted successfully.</p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+    <footer class="reservation-footer">
+        <p>&copy; 2025 The Matrix Garden Lounge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showReservationSuccess() {
+            const modal = document.getElementById("successModal");
+            modal.style.display = "flex"; // Show the modal
+            return false; // Prevents the form from actually submitting
+        }
+        function closeModal() {
+        const modal = document.getElementById("successModal");
+        modal.style.display = "none"; // Hide the modal
+
+        // Reset the form
+        const form = document.querySelector("form");
+        form.reset();
+    }
+    </script>
+</body>
+</html>
+

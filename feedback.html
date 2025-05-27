@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Feedback- The Matrix Garden Lounge</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+     <body>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Home  </a></li>
+            <li> <a href="about.html">About  </a></li>
+            <li> <a href="menu.html">Menu  </a></li>
+            <li> <a href="reservation.html">Reservation  </a></li>
+            <li> <a href="calendar.html">Calendar  </a></li>
+            <li><a href="feedback.html" class="active">Feedback  </a></li>
+        </ul>
+    </nav>
+        <header class="contact-header">
+            <h1>Feedback</h1>
+        </header>
+        <section class="contact-details">
+            <h2>Our Location</h2>
+            <p>Address: Block 6, Plot 54404, Gaborone </p>
+            <p>Phone: +267 73 003555</p>
+            <div class="image-container">
+                <a href="https://maps.app.goo.gl/WJ2abNyDqwzbkp84A" target="The Matrix Garden Lounge">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3626.771537704097!2d25.8854044!3d-24.6315579!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebb5b605e01edcb%3A0x47701d988b67ac40!2sTHE%20MATRIX%20GARDEN%20LOUNGE!5e0!3m2!1sen!2sbw!4v1745825838340!5m2!1sen!2sbw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
+            </div>
+        </section>
+            <section class="contact-form-container">
+                <h1>Get in Touch</h1>
+                <form method="POST" onsubmit="return showContactSuccess()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Write your comments here" required></textarea>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+              <!-- Modal Popup -->
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                     <h2>Thank You!</h2>
+                     <p>Your details have been submitted successfully.</p>
+                    <button onclick="closeModal()">OK</button>
+             </div>
+            </div>
+            <script>
+                function showContactSuccess() {
+                    const modal = document.getElementById("successModal");
+                    modal.style.display = "flex"; // Show the modal
+                    return false; // Prevents the form from actually submitting
+                }
+                    function closeModal() {
+                    const modal = document.getElementById("successModal");
+                    modal.style.display = "none"; // Hide the modal
+
+                // Reset the form
+                const form = document.querySelector("form");
+                form.reset();
+             }
+            </script>
+            <footer>
+                <p>&copy; 2025 The Matrix Garden Lounge. All rights reserved.</p>
+            </footer>
+        </body>
+</html>
+        
